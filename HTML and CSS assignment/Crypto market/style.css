@@ -41,7 +41,7 @@ body {
     border-radius: 5px;
     padding: 5px 15px 5px 15px;
     color: white;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .hero{
@@ -50,7 +50,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding-bottom: 400px;
+    padding-bottom: 350px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -59,17 +59,20 @@ body {
 .hero-heading{
     font-size: 91px;
     margin-left: 350px;    
+    margin-bottom: 0px;
 }
 .hero-description{
     font-size: 30px;
     margin-bottom: 30px;
+    margin-top: 0px;
     font-weight: 500;
 }
 .button-large{
     background-color: #cc14d5;
-    padding: 9px 14px 9px 14px;
+    padding: 11px 14px 11px 14px;
+    margin-top: 7px;
     border-radius: 10px;
     color: white;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 600;
 }
