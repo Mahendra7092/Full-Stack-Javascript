@@ -8,4 +8,5 @@
 2.CRYPTO MARKET<br>
 [CRYPTO MARKET](./HTML%20and%20CSS%20assignment/DAO)<br>
 
-
+3.FASHION HUB <br>
+[FASHION HUB](./HTML%20and%20CSS%20assignment/Fashion%20hub)
