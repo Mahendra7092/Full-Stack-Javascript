@@ -13,3 +13,7 @@
 
 4.CREDIT CARD LANDING PAGE<br>
 [CREDIT CARD](./HTML%20and%20CSS%20assignment/credit%20card%20landing%20page)
+
+## JAVASCRIPT ASSIGNMENT 
+1.QUESTION SOLVING<BR>
+[SOLVE QUESTION](./Javascript%20assignment/AssignmentSolution)

@@ -1,0 +1,779 @@
+// 01. Create a variable.js file and declare variables and assign string, boolean, undefined and null data types, Display all the value with their data type.
+
+// String
+const myName = 'Sreenivas';
+console.log(`${myName} is type of ${typeof myName}`);
+
+// Boolean
+let isCorrect = true;
+console.log(`${isCorrect} is type of ${typeof isCorrect}`);
+
+// Undefined
+let myAge;
+console.log(`${myAge} is type of ${typeof myAge}`);
+
+// Null
+let someValue = null;
+console.log(`${someValue} is type of ${typeof someValue}`);
+
+
+
+// 02. Declare variables to store your first name, last name, marital status, country and age and display them using interploation method.
+
+const firstName = 'Mahendra';
+const lastName = 'Bhamare';
+const maritalStatus = 'unMarried';
+const countryLivesIn = 'India';
+const age = 21;
+
+console.log(
+  `My name is ${firstName} ${lastName}, I am ${age} years old ${maritalStatus}, lives in ${countryLivesIn}.`
+);
+
+
+// 03. Declare a varibale and assign string value to it and change all the string characters to capital letters using toUpperCase() method.
+
+const myName = 'Sreenivasulu Kalluru';
+
+const capitalized = myName.toUpperCase();
+
+console.log(capitalized);
+
+
+// 04. Declare a varibale and assign string value to it and check if the string contains a word Script using includes() method.
+
+const sentence = 'JavaScript is a Popular Programming Language';
+
+if (sentence.includes('Script')) {
+  console.log('Found Script!');
+} else {
+  console.log('No Script here!');
+}
+
+
+// 06. 'Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon' split the string at the comma and change it to an array.
+
+const companies = 'TCS, Google, Microsoft, Apple, IBM, Oracle, Amazon';
+
+let arr = companies.split(',');
+
+console.log(arr);
+
+
+// 07. Declare an array containing the multiple values and use lastIndexOf to determine the position of the first and last occurrence of a word "pw skills".
+
+const names = ['pw skills', 'physics wallah', 'iNeuron', 'hitesh', 'pw skills'];
+
+console.log(names.lastIndexOf('pw skills'));
+
+
+
+// 08. Demonstrate the use of trim() to remove any trailing whitespace at the beginning and the end of a string.
+
+const sentence = ' JavaScript is Very popular😉 ';
+
+const trimmed = sentence.trim();
+
+console.log(trimmed);
+
+
+/* 09. Boolean value is either true or false.
+    - Write three JavaScript statement example which provide truthy value.
+    - Write three JavaScript statement example which provide falsy value.
+*/
+
+// Examples for truthy values
+// 1)
+const hasJob = false;
+console.log(hasJob === false);
+
+// 2)
+const isMarried = false;
+console.log(isMarried === false);
+
+// 3)
+const codingDaily = true;
+console.log(codingDaily === true);
+
+// Examples for falsy values
+// 1)
+const hasBike = false;
+console.log(hasBike === true);
+
+const hasCar = false;
+console.log(hasCar === true);
+
+const hasBankBalance = false;
+console.log(hasBankBalance == true);
+
+
+
+/* 10. Figure out the result of the following comparison expression first without using console.log(). After you decide the result confirm it using console.log()
+    - 4 > 3
+    - 4 >= 3
+    - 4 < 3
+    - 4 <= 3
+    - 4 == 4
+    - 4 === 4
+    - 4 != 4
+    - 4 !== 4
+    - 4 != '4'
+    - 4 == '4'
+    - 4 === '4'
+    - Find the length of python and jargon and make a falsy comparison statement.
+*/
+
+4 > 3;
+console.log(true);
+
+4 >= 3;
+console.log(true);
+
+4 < 3;
+console.log(false);
+
+4 <= 3;
+console.log(false);
+
+4 == 4;
+console.log(true);
+
+4 === 4;
+console.log(true);
+
+4 != 4;
+console.log(false);
+
+4 !== 4;
+console.log(false);
+
+4 != '4';
+console.log(false);
+
+4 == '4';
+console.log(true);
+
+4 === '4';
+console.log(false);
+
+// - Find the length of python and jargon and make a falsy comparison statement.
+const word1 = 'python';
+const word2 = 'jargon';
+
+let comparison = word1.length !== word2.length;
+
+console.log(comparison);
+
+
+
+/* 11. Use the Date object to do the following activities
+    - What is the year today?
+    - What is the month today as a number?
+    - What is the date today?
+    - What is the day today as a number?
+    - What is the hours now?
+    - What is the minutes now?
+    - Find out the numbers of seconds elapsed from January 1, 1970 to now.
+*/
+
+const currentDate = new Date();
+console.log(currentDate);
+
+// Current Year
+let currentYear = currentDate.getFullYear();
+console.log(currentYear);
+
+// Current Month
+let currentMonth = currentDate.getMonth() + 1;
+console.log(currentMonth);
+
+// Today Date
+let todayDate = currentDate.getDate();
+console.log(todayDate);
+
+// Toddy Day
+let todayDay = currentDate.getDay() + 1;
+console.log(todayDay);
+
+// Current Hours
+let currentHour = currentDate.getHours();
+console.log(currentHour);
+
+// Current Minute
+let currentMinute = currentDate.getMinutes();
+console.log(currentMinute);
+
+// To find Elapsed seconds since January 1, 1970
+let prevTime = new Date(1970, 01, 01); // 1970 January 01
+let thisTime = new Date(); // now
+let elapsedTime = thisTime.getTime() - prevTime.getTime();
+console.log(elapsedTime / 1000);
+
+
+/* 12. Create a human readable time format using the Date time object
+    - YYYY-MM-DD HH:mm
+    - DD-MM-YYYY HH:mm
+    - DD/MM/YYYY HH:mm
+*/
+
+const todayDate = new Date();
+let year = todayDate.getFullYear();
+let month = todayDate.getMonth() + 1;
+let day = todayDate.getDate();
+let hour = todayDate.getHours();
+let minute = todayDate.getMinutes();
+
+if (day < 10) day = '0' + day;
+if (month < 10) month = '0' + month;
+
+// YYYY-MM-DD HH:mm :ss
+const formattedDate1 =
+  year + '-' + month + '-' + day + ' ' + hour + ':' + minute;
+
+console.log(formattedDate1);
+
+// DD-MM-YYYY HH:mm : ss
+const formattedDate2 =
+  day + '-' + month + '-' + year + ' ' + hour + ':' + minute;
+
+console.log(formattedDate2);
+
+//  DD/MM/YYYY HH:mm
+const formattedDate3 =
+  day + '/' + month + '/' + year + ' ' + hour + ':' + minute;
+
+console.log(formattedDate3);
+
+
+
+// 13. Get user input using prompt(“Enter your age:”). If user is 18 or older , give feedback:'You are old enough to drive' but if not 18 give another feedback stating to wait for the number of years he needs to turn 18.
+
+const enteredAge = parseInt(prompt('Enter your age:'));
+if (enteredAge >= 18) {
+  alert('You are old enough to drive');
+} else {
+  alert(`Please wait for another ${18 - enteredAge} years to start driving`);
+}
+
+// console.log(enteredAge);
+// <!DOCTYPE html>
+// <html lang="en">
+// <head>
+//   <meta charset="UTF-8">
+//   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+//   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//   <title>Age</title>
+// </head>
+// <body>
+  
+//   <script src="./age.js"></script>
+// </body>
+// </html>
+
+
+//  14. Even numbers are divisible by 2 and the remainder is zero. How do you check, if a number is even or not using JavaScript? Create a program which checks that the given number is even or odd.
+
+let number = 4;
+
+if (number % 2 === 0) {
+  console.log('Given Number is Even');
+} else {
+  console.log('Given Number is Odd');
+}
+
+
+
+/* 15. Write a program which can give grades to students according to theirs scores:
+    - 80-100, A
+    - 70-89, B
+    - 60-69, C
+    - 50-59, D
+    - 0-49, F
+*/
+
+function gradeEvaluation(marks) {
+    if (marks >= 80 && marks <= 100) {
+      return 'Your grade is A';
+    } else if (marks >= 70 && marks <= 79) {
+      return 'Your grade is B';
+    } else if (marks >= 60 && marks <= 69) {
+      return 'Your grade is C.';
+    } else if (marks >= 50 && marks <= 59) {
+      return 'Your grade is D';
+    } else if (marks >= 0 && marks <= 49) {
+      return 'Your grade is F or You have failed in the exam';
+    } else {
+      return 'Either you have entered incorrect marks i.e, negative marks or marks greater than 100';
+    }
+  }
+  const marksObtained = gradeEvaluation(44);
+  console.log(marksObtained);
+
+
+  //17. Write a program which tells the number of days in a month
+
+// Month in JavaScript is 0-indexed (January is 0, February is 1, etc),
+// but by using 0 as the day it will give us the last day of the prior
+// month. So passing in 1 as the month number will return the last day
+// of January, not February
+
+// Here January is 1 based
+//Day 0 is the last day in the previous month
+
+let getDaysInMonth = function (year, month) {
+    return new Date(year, month, 0).getDate();
+    // Here January is 0 based
+    // return new Date(year, month+1, 0).getDate();
+  };
+  
+  // January 2017
+  console.log(getDaysInMonth(2017, 1));
+  
+  // April 2023
+  console.log(getDaysInMonth(2023, 4));
+  
+  // February 2022
+  console.log(getDaysInMonth(2022, 2));
+
+
+
+  // 18. Write a program which tells the number of days in a month, now consider leap year.
+
+// We can use the same code used in the previous example
+
+// Month in JavaScript is 0-indexed (January is 0, February is 1, etc),
+// but by using 0 as the day it will give us the last day of the prior
+// month. So passing in 1 as the month number will return the last day
+// of January, not February
+
+// Here January is 1 based
+//Day 0 is the last day in the previous month
+
+let getDaysInMonth = function (year, month) {
+    return new Date(year, month, 0).getDate();
+    // Here January is 0 based
+    // return new Date(year, month+1, 0).getDate();
+  };
+  
+  // The complete list of leap years in the first half of the 21st century are 2000, 2004, 2008, 2012, 2016, 2020, 2024, 2028, 2032, 2036, 2040, 2044, and 2048.
+  
+  // February 2024
+  console.log(getDaysInMonth(2024, 2));
+  
+  //  February 2020
+  console.log(getDaysInMonth(2020, 2));
+  
+  // February 2016
+  console.log(getDaysInMonth(2016, 2));
+
+
+
+
+  /*20. In the following shopping cart add, remove, edit items
+    => const shoppingCart = ['Milk', 'Coffee', 'Tea', 'Honey']
+    - add 'Meat' in the beginning of your shopping cart if it has not been already added
+    - add Sugar at the end of your shopping cart if it has not been already added
+    - remove 'Honey'
+    - modify Tea to 'Green Tea'*/
+
+const shoppingCart = ['Milk', 'Coffee', 'Tea', 'Honey'];
+
+// add 'Meat' in the beginning of your shopping cart if it has not been already added
+shoppingCart.unshift('Meat');
+console.log(shoppingCart); // [ 'Meat', 'Milk', 'Coffee', 'Tea', 'Honey' ]
+
+// add Sugar at the end of your shopping cart if it has not been already added
+shoppingCart.push('Sugar');
+console.log(shoppingCart); // [ 'Meat', 'Milk', 'Coffee', 'Tea', 'Honey', 'Sugar' ]
+
+// remove 'Honey'
+shoppingCart.splice(4, 1);
+console.log(shoppingCart); //[ 'Meat', 'Milk', 'Coffee', 'Tea', 'Sugar' ]
+
+//modify Tea to 'Green Tea'
+const tea = shoppingCart.indexOf('Tea');
+shoppingCart.splice(tea, 1, 'Green Tea');
+console.log(shoppingCart); //[ 'Meat', 'Milk', 'Coffee', 'Green Tea', 'Sugar' ]
+
+
+// 21. In countries array check if 'Ethiopia' exists in the array if it exists print 'ETHIOPIA'. If it does not exist add to the countries list.
+
+const countries = ['INDIA', 'GERMANY', 'DUBAI', 'U.K', 'FRANCE'];
+
+if (countries.includes('ETHOPIA')) {
+  console.log('ETHOPIA');
+} else {
+  countries.push('ETHOPIA');
+}
+
+
+/*22. The following is an array of 10 students ages:
+    => const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
+    - Sort the array and find the min and max age
+    - Find the median age(one middle item or two middle items divided by two)
+    - Find the average age(all items divided by number of items)
+    - Find the range of the ages(max minus min)
+    - Compare the value of (min - average) and (max - average), use abs() method 
+*/
+
+const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24];
+
+//Sort the array and find the min and max age
+ages.sort(function compareAges(a, b) {
+  if (a > b) {
+    return 1;
+  } else if (a < b) {
+    return -1;
+  } else {
+    return 0;
+  }
+});
+
+// Sorted ages array
+console.log(ages);
+
+const minAge = ages[0];
+console.log(minAge);
+const maxAge = ages[ages.length - 1];
+console.log(maxAge);
+
+//  Find the median age(one middle item or two middle items divided by two)
+const meadianAge = (ages[ages.length / 2] + ages[ages.length / 2 - 1]) / 2;
+console.log(`The meadian age is ${meadianAge}`);
+
+// Find the average age(all items divided by number of items)
+let sumOfAges = 0;
+ages.forEach((item) => {
+  sumOfAges = sumOfAges + item;
+});
+
+const averageAge = sumOfAges / ages.length;
+console.log(`The average age is: ${averageAge}`);
+
+// Find the range of the ages(max minus min)
+const ageRange = ages[ages.length - 1] - ages[0];
+console.log(`The Range is ${ageRange}`);
+
+//Compare the value of (min - average) and (max - average), use abs() method
+const minMinusAverage = Math.abs(ages[0] - averageAge);
+const maxMinusAverage = Math.abs(ages[ages.length - 1] - averageAge);
+console.log(minMinusAverage, maxMinusAverage);
+
+if (minMinusAverage > maxMinusAverage) {
+  console.log('minMinusaverage is greater than maxMinusAverage');
+} else if (minMinusAverage < maxMinusAverage) {
+  console.log('minMinusaverage is less than maxMinusAverage');
+} else {
+  console.log('Either Both are equal or Not equal');
+}
+
+
+
+
+//23 Question
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prime Number</title>
+  </head>
+  <body>
+    <script src="./script.js"></script>
+  </body>
+</html>
+
+// To start, set a flag to true
+let isPrime = true;
+
+const number = prompt('Enter a number Greater than 1');
+
+// We will use a for loop to loop through numbers from 2 to the number we are testing
+// We can start at 2 because all numbers are divisible by 1
+
+for (let i = 2; i < number; i++) {
+  // If the number is divisible by any other number (besides 1 and itself)
+  // then it is not a prime number
+  if (number % i === 0) {
+    isPrime = false;
+    break;
+  }
+}
+
+// Finally, output the result
+if (number === 1) {
+  alert(`${number} is not a prime number`);
+  console.log(`${number} is not a prime number`);
+} else if (isPrime) {
+  alert(`${number} is a prime number`);
+  console.log(`${number} is a prime number`);
+} else {
+  alert(`${number} is not a prime number`);
+  console.log(`${number} is not a prime number`);
+}
+
+
+
+
+
+// 24. Write a program to create two array "even" and "odd" having even and odd number between the 0 to 100 (0 and 100 included).
+
+let evenArray = [];
+let oddArray = [];
+
+for (let i = 0; i <= 100; i++) {
+  if (i % 2 === 0) {
+    evenArray.push(i);
+  } else {
+    oddArray.push(i);
+  }
+}
+
+console.log(evenArray);
+console.log(oddArray);
+
+
+/* 25. Body mass index(BMI) is calculated as follows: bmi = weight in Kg / (height x height) in m2. Write a function which calculates bmi. BMI is used to broadly define different weight groups in adults 20 years old or older.Check if a person is underweight, normal, overweight or obese based the information given below.
+    - The same groups apply to both men and women.
+    - Underweight: BMI is less than 18.5
+    - Normal weight: BMI is 18.5 to 24.9
+    - Overweight: BMI is 25 to 29.9
+    - Obese: BMI is 30 or more
+*/
+
+const weight = 54;
+const height = 1.6;
+
+function BMI(weight, height) {
+  let bmi = weight / (height * height);
+  return bmi;
+}
+
+let bmi = BMI(weight, height);
+
+if (bmi < 18.5) {
+  console.log('Underweight');
+} else if (bmi >= 18.5 && bmi <= 24.9) {
+  console.log('Normal weight');
+} else if (bmi >= 25 && bmi <= 29.9) {
+  console.log('Overweight');
+} else {
+  console.log('Obese');
+}
+console.log('the value: ' + BMI(weight, height));
+
+
+
+/* 26. Write a program to print the table of any number given by the user. The format of the output should be smiliar to the below example-
+	If the number given by the user is 2 then the output should look like this-
+	2 * 1 = 2
+	2 * 2 = 4
+	2 * 3 = 6 and so on till 2 * 10 = 20.
+*/
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table Calculator</title>
+  </head>
+  <body>
+    <script src="./script.js"></script>
+  </body>
+</html>
+
+// Take input from the user
+const number = parseInt(prompt('Enter a number: '));
+
+//creating a multiplication table
+for (let i = 1; i <= 10; i++) {
+  // multiply i with number
+  const result = i * number;
+
+  // display the result
+  console.log(`${number} * ${i} = ${result}`);
+}
+
+
+
+// 27. Write a program to print all the prime number between 0 to 100 (0 and 100 included).
+
+function printPrimes(start, end) {
+    for (let i = start; i <= end; i++) {
+      let isPrime = true;
+      if (i === 0 || i === 1) {
+        isPrime = false;
+      }
+      for (let j = 2; j <= Math.sqrt(i); j++) {
+        if (i % j === 0) {
+          isPrime = false;
+          break;
+        }
+      }
+      if (isPrime) {
+        console.log(i);
+      }
+    }
+  }
+  
+  console.log(printPrimes(0, 100));
+
+  
+
+
+ /* 28. Write a program to print the given patterns using the loops-
+  a. Print a triangle pattern, if the given input is 3 then the pattern should be similar to the given output
+     *
+     **
+     ***
+  
+  b. Print a square pattern, if the input is 3 then the output should be similar to the given output
+     ***
+     ***
+     ***
+
+  c. Print a pyramid pattern, if the input is 3 then the output should be similar to the given output
+       *
+      ***
+      *****
+*/
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Star Pattern</title>
+  </head>
+  <body>
+    <script src="./script.js"></script>
+  </body>
+</html>
+
+/*a. Print a triangle pattern, if the given input is 3 then the pattern should be similar to the given output
+ *
+ **
+ ***
+ */
+
+// Take input from user
+const n = parseInt(prompt('Enter a number: '));
+
+let string1 = '';
+for (let i = 1; i <= n; i++) {
+  for (let j = 0; j < i; j++) {
+    string1 += '*';
+  }
+  string1 += '\n';
+}
+console.log(string1);
+
+/* 	b. Print a square pattern, if the input is 3 then the output should be similar to the given output
+ ***
+ ***
+ ***
+ */
+
+let string2 = '';
+
+for (let i = 0; i < n; i++) {
+  p;
+  for (let j = 0; j < n; j++) {
+    string2 += '*';
+  }
+
+  string2 += '\n';
+}
+console.log(string2);
+
+/*
+c. Print a pyramid pattern, if the input is 3 then the output should be similar to the given output
+	     *
+	    ***
+ 	   *****
+  */
+
+let string = '';
+
+for (let i = 1; i <= n; i++) {
+  for (let j = 1; j <= n - i; j++) {
+    string += ' ';
+  }
+
+  for (let k = 0; k < 2 * i - 1; k++) {
+    string += '*';
+  }
+  string += '\n';
+}
+console.log(string);
+
+
+
+
+// 29. 29. Write a javascript program which takes the input of filename as string and prints the extension of the file in the console.
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="./script.js"></script>
+  </body>
+</html>
+// program to get the file extension
+
+let filename = prompt('Enter a filename with the extension ');
+
+function getFileExtension(filename) {
+  // get file extension
+  const extension = filename.split('.').pop();
+  return extension;
+}
+
+// passing the filename
+const output = getFileExtension(filename);
+console.log(output);
+
+
+
+// 30. Create a simple calculator program in JavaScript which can perform the addition, substraction, multiplication and division on given numbers.
+
+// program for a simple calculator
+let result;
+
+// take the operand input
+const number1 = 8;
+const number2 = 4;
+const operator = '/';
+
+switch (operator) {
+  case '+':
+    result = number1 + number2;
+    console.log(`${number1} + ${number2} = ${result}`);
+    break;
+
+  case '-':
+    result = number1 - number2;
+    console.log(`${number1} - ${number2} = ${result}`);
+    break;
+
+  case '*':
+    result = number1 * number2;
+    console.log(`${number1} * ${number2} = ${result}`);
+    break;
+
+  case '/':
+    result = number1 / number2;
+    console.log(`${number1} / ${number2} = ${result}`);
+    break;
+
+  default:
+    console.log('Invalid operator');
+    break;
+}
